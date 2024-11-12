@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="admin_page.css">
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large w3-red" onclick="w3_close()">Close &times;</button>
+  <a href="#" class="w3-bar-item w3-button">Dashboard</a>
+  <a href="#" class="w3-bar-item w3-button">User Management</a>
+  <a href="#" class="w3-bar-item w3-button">Posts</a>
+  <a href="#" class="w3-bar-item w3-button">Comments</a>
+  <a href="#" class="w3-bar-item w3-button">Settings</a>
+  <a href="#" class="w3-bar-item w3-button w3-text-red" onclick="confirmLogout()">Logout</a>
+</div>
+
+<!-- Main Content -->
+<div id="main">
+  <div class="w3-teal">
+    <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+    <div class="w3-container">
+      <h1>Admin Dashboard</h1>
+    </div>
+  </div>
+
+  <!-- Dashboard Content -->
+  <div class="w3-container dashboard-content">
+    <!-- Statistics Section -->
+    <div class="stats">
+      <div class="card users">Total Users: 345</div>
+      <div class="card posts">Total Posts: 120</div>
+      <div class="card comments">Total Comments: 450</div>
+    </div>
+  
+    <!-- User List Section -->
+    <div class="w3-container w3-card w3-white card">
+      <h3>User Management</h3>
+      <p>This is where you can manage users.</p>
+      <table class="w3-table w3-striped w3-bordered">
+        <tr class="w3-teal">
+          <th>User ID</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Actions</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>admin123</td>
+          <td>admin@example.com</td>
+          <td>Admin</td>
+          <td><button class="w3-button w3-green w3-small">Edit</button> <button class="w3-button w3-red w3-small">Delete</button></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>user456</td>
+          <td>user@example.com</td>
+          <td>User</td>
+          <td><button class="w3-button w3-green w3-small">Edit</button> <button class="w3-button w3-red w3-small">Delete</button></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Logout Confirmation Modal -->
+<div id="logoutModal" class="w3-modal">
+  <div class="w3-modal-content w3-card w3-animate-top" style="max-width: 400px;">
+    <header class="w3-container w3-teal">
+      <h2>Confirm Logout</h2>
+    </header>
+    <div class="w3-container">
+      <p>Are you sure you want to log out?</p>
+      <button onclick="logout()" class="w3-button w3-red">Yes</button>
+      <button onclick="closeModal()" class="w3-button w3-gray">No</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// Sidebar toggle functions
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "25%";
+  document.getElementById("mySidebar").style.width = "25%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+
+// Show the logout confirmation modal
+function confirmLogout() {
+  document.getElementById('logoutModal').style.display = 'block';
+}
+
+// Hide the logout confirmation modal
+function closeModal() {
+  document.getElementById('logoutModal').style.display = 'none';
+}
+
+// Redirect to login page if user confirms logout
+function logout() {
+  window.location.href = "login" // Adjust to your login page URL
+}
+</script>
+
+</body>
+</html>

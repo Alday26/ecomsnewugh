@@ -1,0 +1,28 @@
+body { font-family: Arial, sans-serif; }
+.w3-sidebar { background-color: #222; color: #fff; }
+.w3-bar-item:hover { background-color: #444 !important; }
+.profile-content { margin-top: 20px; text-align: center; }
+.profile-header { padding: 20px; }
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #2196F3;
+  margin-top: 10px;
+}
+.profile-header h2 { font-size: 24px; margin: 10px 0; }
+.profile-details { margin: 20px 0; padding: 15px; text-align: left; }
+.profile-details h3 { color: #333; margin-bottom: 10px; }
+
+/* Order History */
+.order-list, .wishlist-list { list-style-type: none; padding: 0; }
+.order-item, .wishlist-item { display: flex; align-items: center; margin-bottom: 10px; }
+.order-pic, .wishlist-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+
+/* Buttons */
+.w3-button { margin: 5px; }

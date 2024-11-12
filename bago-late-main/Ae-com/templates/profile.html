@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>E-commerce Profile Page</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="ecommerce_profile.css">
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large w3-red" onclick="w3_close()">Close &times;</button>
+  <a href="#" class="w3-bar-item w3-button">Dashboard</a>
+  <a href="#" class="w3-bar-item w3-button">Orders</a>
+  <a href="#" class="w3-bar-item w3-button">Wishlist</a>
+  <a href="#" class="w3-bar-item w3-button">Settings</a>
+  <a href="#" class="w3-bar-item w3-button w3-text-red">Logout</a>
+</div>
+
+<!-- Main Content -->
+<div id="main">
+  <div class="w3-teal header">
+    <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+    <div class="w3-container">
+      <h1>User Profile</h1>
+    </div>
+  </div>
+
+  <!-- Profile Header -->
+  <div class="w3-container profile-content">
+    <div class="profile-header">
+      <img src="profile_pic.jpg" alt="Profile Picture" class="profile-pic">
+      <h2>John Doe</h2>
+      <p>Email: johndoe@example.com</p>
+      <button class="w3-button w3-teal">Edit Profile</button>
+    </div>
+
+    <!-- Account Sections -->
+    <div class="w3-container w3-card w3-white profile-details">
+      <h3>Order History</h3>
+      <ul class="order-list">
+        <li>
+          <div class="order-item">
+            <img src="product1.jpg" alt="Product" class="order-pic">
+            <div>
+              <h4>Product Name 1</h4>
+              <p>Order Date: 2024-11-10</p>
+              <p>Status: Delivered</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="order-item">
+            <img src="product2.jpg" alt="Product" class="order-pic">
+            <div>
+              <h4>Product Name 2</h4>
+              <p>Order Date: 2024-10-25</p>
+              <p>Status: Shipped</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="w3-container w3-card w3-white profile-details">
+      <h3>Wishlist</h3>
+      <ul class="wishlist-list">
+        <li>
+          <div class="wishlist-item">
+            <img src="wishlist1.jpg" alt="Wishlist Product" class="wishlist-pic">
+            <div>
+              <h4>Wishlist Product 1</h4>
+              <button class="w3-button w3-blue w3-small">Add to Cart</button>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="wishlist-item">
+            <img src="wishlist2.jpg" alt="Wishlist Product" class="wishlist-pic">
+            <div>
+              <h4>Wishlist Product 2</h4>
+              <button class="w3-button w3-blue w3-small">Add to Cart</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="w3-container w3-card w3-white profile-details">
+      <h3>Shipping Address</h3>
+      <p>123 Main St, Hometown, Country</p>
+      <button class="w3-button w3-teal">Edit Address</button>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript for Sidebar -->
+<script>
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "25%";
+  document.getElementById("mySidebar").style.width = "25%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+</script>
+
+</body>
+</html>

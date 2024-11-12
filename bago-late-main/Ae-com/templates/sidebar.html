@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/static/sidebar.css">
+</head>
+<body>
+  <!-- sidebar.html -->
+<div class="sidebar">
+  <a href="{{ url_for('index') }}" class="sidebar-btn">Home</a>
+  <a href="{{ url_for('reset_password') }}" class="sidebar-btn">Reset Password</a>
+  <a href="{{ url_for('view_order') }}" class="sidebar-btn">View Order</a>
+  <a href="{{ url_for('logout') }}" class="sidebar-btn">Logout</a>
+</div>
